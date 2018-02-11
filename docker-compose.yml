@@ -192,8 +192,7 @@ services:
     networks:
       - my-network
   jenkins-slave:
-    build: ./jenkins-slave
-    image: cbn/jenkins-slave
+    image: wakuwaku3/jenkins-slave
     restart: always
     privileged: true
     volumes: 
@@ -215,8 +214,7 @@ services:
       - DB_PASS=password
       - DB_NAME=redmine
   redmine:
-    build: ./redmine
-    image: cbn/redmine
+    image: wakuwaku3/redmine
     restart: always
     environment:
       REDMINE_DB_POSTGRES: redmine-postgresql
